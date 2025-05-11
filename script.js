@@ -438,7 +438,130 @@ input[type="submit"] {
       <p>By applying these responsive design principles, you'll create websites that provide an optimal viewing and interaction experience across a wide range of devices.</p>
     `
   },
+    {
+    id: 5,
+    title: 'Introduction to Web Accessibility',
+    date: 'April 15, 2023',
+    readTime: '7 min read',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475',
+    summary: 'Learn how to make your websites accessible to all users, including those with disabilities...',
+    content: `
+      <p>Web accessibility ensures that websites and web applications are designed and developed so that people with disabilities can use them. Here's how to get started with implementing accessibility in your web projects.</p>
+      
+      <h3>Why Accessibility Matters</h3>
+      <p>Accessibility is important because:</p>
+      <ul>
+        <li>It ensures equal access to information and functionality</li>
+        <li>It improves usability for all users</li>
+        <li>It's often a legal requirement</li>
+        <li>It can improve SEO and reach a wider audience</li>
+      </ul>
+      
+      <h3>Key Principles of Web Accessibility</h3>
+      <p>The Web Content Accessibility Guidelines (WCAG) define four principles:</p>
+      <ol>
+        <li><strong>Perceivable</strong>: Information must be presentable to users in ways they can perceive.</li>
+        <li><strong>Operable</strong>: User interface components must be operable.</li>
+        <li><strong>Understandable</strong>: Information and operation must be understandable.</li>
+        <li><strong>Robust</strong>: Content must be robust enough to be interpreted by various user agents.</li>
+      </ol>
+      
+      <h3>Practical Implementation Tips</h3>
+      
+      <h4>Semantic HTML</h4>
+      <p>Use appropriate HTML elements that convey meaning:</p>
+      <pre><code>
+<!-- Instead of -->
+<div class="heading">My Page Title</div>
 
+<!-- Use -->
+<h1>My Page Title</h1>
+
+<!-- For navigation -->
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+      </code></pre>
+      
+      <h4>Alternative Text for Images</h4>
+      <p>Provide descriptive alt text for images:</p>
+      <pre><code>
+<!-- Informative image -->
+<img src="chart.jpg" alt="Bar chart showing sales growth from 2020 to 2023">
+
+<!-- Decorative image -->
+<img src="decorative-line.jpg" alt="">
+      </code></pre>
+      
+      <h4>Keyboard Navigation</h4>
+      <p>Ensure all interactive elements are accessible via keyboard:</p>
+      <pre><code>
+<!-- Make sure custom components are keyboard accessible -->
+<div 
+  role="button" 
+  tabindex="0" 
+  onclick="toggleMenu()"
+  onkeydown="if(event.key==='Enter' || event.key===' ') toggleMenu()"
+>
+  Menu
+</div>
+      </code></pre>
+      
+      <h4>Color Contrast</h4>
+      <p>Ensure sufficient contrast between text and background:</p>
+      <pre><code>
+/* Bad contrast */
+.low-contrast {
+  color: #aaa;
+  background-color: #999;
+}
+
+/* Good contrast */
+.good-contrast {
+  color: #222;
+  background-color: #fff;
+}
+      </code></pre>
+      
+      <h4>Form Labels and Instructions</h4>
+      <p>Provide clear labels for form controls:</p>
+      <pre><code>
+<label for="username">Username:</label>
+<input id="username" type="text" aria-describedby="username-help">
+<p id="username-help">Create a username with at least 5 characters</p>
+      </code></pre>
+      
+      <h4>ARIA Attributes</h4>
+      <p>Use ARIA when necessary to enhance accessibility:</p>
+      <pre><code>
+<div role="alert" aria-live="assertive">
+  Form submitted successfully!
+</div>
+
+<button aria-expanded="false" aria-controls="dropdown1">
+  Options
+</button>
+<ul id="dropdown1" hidden>
+  <li><a href="#">Option 1</a></li>
+  <li><a href="#">Option 2</a></li>
+</ul>
+      </code></pre>
+      
+      <h3>Testing for Accessibility</h3>
+      <p>Use these methods to test your site's accessibility:</p>
+      <ul>
+        <li>Automated tools like Lighthouse, WAVE, or axe</li>
+        <li>Keyboard-only navigation testing</li>
+        <li>Screen reader testing (VoiceOver, NVDA, JAWS)</li>
+        <li>Manual checks using accessibility checklists</li>
+      </ul>
+      
+      <p>Remember that accessibility is not a one-time effort but an ongoing process. By incorporating these practices into your development workflow, you'll create more inclusive web experiences for all users.</p>
+    `
+  },
 
   {
     id: 6,
