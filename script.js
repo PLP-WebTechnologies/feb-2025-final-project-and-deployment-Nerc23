@@ -231,3 +231,59 @@ if (age >= 18) {
 } else {
   console.log("You are a minor");
 }
+
+// Switch statement
+switch (day) {
+  case "Monday":
+    console.log("Start of work week");
+    break;
+  case "Friday":
+    console.log("End of work week");
+    break;
+  default:
+    console.log("Another day");
+}
+
+// For loop
+for (let i = 0; i < 5; i++) {
+  console.log(i); }
+
+// While loop
+let i = 0;
+while (i < 5) {
+  console.log(i);
+  i++; }
+      </code></pre>
+      
+      <h3>Working with Arrays</h3>
+      <p>Arrays are ordered collections that can store multiple values:</p>
+      <pre><code>
+// Creating an array
+const fruits = ["Apple", "Banana", "Orange"];
+
+// Accessing elements
+console.log(fruits[0]); 
+
+// Array methods
+fruits.push("Mango"); 
+fruits.pop(); 
+fruits.unshift("Strawberry"); 
+fruits.shift();
+
+// Higher-order array methods
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(num => num * 2);
+const evens = numbers.filter(num => num % 2 === 0); 
+      </code></pre>
+      <h3>Objects</h3>
+      <p>Objects store collections of data as key-value pairs:</p>
+      <pre><code>
+// Creating an object
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  greet: function() {
+    return "Hello, I'm " + this.firstName;
+  }
+};
