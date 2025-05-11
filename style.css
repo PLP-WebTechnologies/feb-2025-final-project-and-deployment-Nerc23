@@ -240,4 +240,29 @@ ul {
   background-color: #2a75e6;
   }
 
+/* About page */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.author-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  }
 
