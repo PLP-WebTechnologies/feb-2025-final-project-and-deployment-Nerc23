@@ -1,4 +1,3 @@
-
 // Blog posts data
 const blogPosts = [
   {
@@ -136,4 +135,99 @@ document.getElementById('myButton').addEventListener('click', function() {
 /* Base styles for all screen sizes */
 .container {
   padding: 15px;
+}
+
+/* Styles for screens wider than 768px */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+}
+      </code></pre>
+      
+      <h3>6. Comment Your Code</h3>
+      <p>Add meaningful comments to explain complex parts of your CSS, especially for large projects:</p>
+      <pre><code>
+/* Main navigation styles
+   - Uses flexbox for layout
+   - Includes dropdown functionality
+   ----------------------------------------- */
+      </code></pre>
+      
+      <h3>7. Avoid !important</h3>
+      <p>Use !important sparingly, as it breaks the natural cascading behavior of CSS and can lead to specificity wars.</p>
+      
+      <h3>8. Optimize for Performance</h3>
+      <p>Consider performance by:</p>
+      <ul>
+        <li>Using efficient selectors</li>
+        <li>Minimizing redundant code</li>
+        <li>Compressing your CSS files</li>
+        <li>Considering critical CSS techniques</li>
+      </ul>
+      
+      <p>By following these best practices, you'll create CSS that's easier to maintain, more efficient, and more scalable as your projects grow.</p>
+    `
+  },
+  {
+    id: 3,
+    title: 'JavaScript Fundamentals',
+    date: 'April 28, 2023',
+    readTime: '4 min read',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+    summary: 'Master the core concepts of JavaScript programming language...',
+    content: `
+      <p>JavaScript is the programming language of the web, enabling interactive and dynamic content. Understanding its fundamentals is essential for any web developer.</p>
+      
+      <h3>Variables and Data Types</h3>
+      <p>JavaScript has several ways to declare variables:</p>
+      <pre><code>
+// Using let (block-scoped, can be reassigned)
+let age = 25;
+
+// Using const (block-scoped, cannot be reassigned)
+const PI = 3.14159;
+
+// Using var (function-scoped, older way)
+var name = "John";
+      </code></pre>
+      
+      <p>Common data types include:</p>
+      <ul>
+        <li><strong>String</strong>: "Hello, world!"</li>
+        <li><strong>Number</strong>: 42, 3.14</li>
+        <li><strong>Boolean</strong>: true, false</li>
+        <li><strong>Object</strong>: {name: "John", age: 30}</li>
+        <li><strong>Array</strong>: [1, 2, 3, 4]</li>
+        <li><strong>Null</strong>: null</li>
+        <li><strong>Undefined</strong>: undefined</li>
+      </ul>
+      
+      <h3>Functions</h3>
+      <p>Functions are blocks of code designed to perform specific tasks:</p>
+      <pre><code>
+// Function declaration
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+// Arrow function (ES6)
+const greet = (name) => {
+  return "Hello, " + name + "!";
+};
+
+// Function expression
+const greet = function(name) {
+  return "Hello, " + name + "!";
+};
+      </code></pre>
+      
+      <h3>Control Flow</h3>
+      <p>JavaScript provides several structures to control the flow of execution:</p>
+      <pre><code>
+// If-else statement
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
 }
