@@ -438,3 +438,143 @@ input[type="submit"] {
       <p>By applying these responsive design principles, you'll create websites that provide an optimal viewing and interaction experience across a wide range of devices.</p>
     `
   },
+
+
+  {
+    id: 6,
+    title: 'Version Control with Git',
+    date: 'April 5, 2023',
+    readTime: '5 min read',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    summary: 'Master the essentials of Git for effective version control in your projects...',
+    content: `
+      <p>Git is a powerful version control system that helps you track changes, collaborate with others, and manage your codebase efficiently. Let's explore the key concepts and commands you need to know.</p>
+      
+      <h3>Getting Started with Git</h3>
+      <p>To begin using Git, you'll need to set it up and create a repository:</p>
+      <pre><code>
+# Configure Git with your identity
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Create a new repository
+git init my-project
+cd my-project
+
+# Or clone an existing repository
+git clone https://github.com/username/repository.git
+      </code></pre>
+      
+      <h3>Basic Git Workflow</h3>
+      <p>The core Git workflow involves three main areas:</p>
+      <ol>
+        <li><strong>Working Directory</strong>: Where you edit files</li>
+        <li><strong>Staging Area</strong>: Where you prepare changes for committing</li>
+        <li><strong>Repository</strong>: Where changes are permanently stored</li>
+      </ol>
+      
+      <pre><code>
+# Check status of your files
+git status
+
+# Add files to staging area
+git add filename.js           # Add specific file
+git add .                     # Add all files
+
+# Commit staged changes
+git commit -m "Add new feature"
+
+# View commit history
+git log
+      </code></pre>
+      
+      <h3>Branching and Merging</h3>
+      <p>Branches allow you to develop features, fix bugs, or experiment without affecting the main codebase:</p>
+      <pre><code>
+# Create and switch to a new branch
+git branch feature-login
+git checkout feature-login
+
+# Or in one command (Git 2.23+)
+git switch -c feature-login
+
+# List branches
+git branch
+
+# Switch between branches
+git checkout main
+# Or
+git switch main
+
+# Merge a branch into current branch
+git merge feature-login
+
+# Delete a branch after merging
+git branch -d feature-login
+      </code></pre>
+      
+      <h3>Remote Repositories</h3>
+      <p>Work with remote repositories for collaboration:</p>
+      <pre><code>
+# Add a remote repository
+git remote add origin https://github.com/username/repo.git
+
+# Push local branch to remote
+git push -u origin main
+
+# Get updates from remote
+git fetch origin
+
+# Download and merge changes
+git pull origin main
+      </code></pre>
+      
+      <h3>Handling Conflicts</h3>
+      <p>When Git can't automatically merge changes, you'll need to resolve conflicts:</p>
+      <pre><code>
+# After a merge conflict occurs:
+# 1. Open the conflicted files
+# 2. Look for the conflict markers: <<<<<<< HEAD, =======, >>>>>>>
+# 3. Edit the file to resolve the conflict
+# 4. Save the file
+git add resolved-file.js
+git commit -m "Resolve merge conflict"
+      </code></pre>
+      
+      <h3>Useful Git Commands</h3>
+      <p>Additional commands to enhance your Git workflow:</p>
+      <pre><code>
+# Discard changes in working directory
+git restore file.txt
+# Or (older syntax)
+git checkout -- file.txt
+
+# Unstage a file
+git restore --staged file.txt
+# Or (older syntax)
+git reset HEAD file.txt
+
+# Amend the last commit
+git commit --amend -m "Updated commit message"
+
+# Stash changes temporarily
+git stash
+git stash pop
+
+# Create a tag
+git tag v1.0.0
+      </code></pre>
+      
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Commit early and often with clear messages</li>
+        <li>Pull before you push to avoid conflicts</li>
+        <li>Use branches for new features and bug fixes</li>
+        <li>Write descriptive commit messages in the imperative ("Add feature" not "Added feature")</li>
+        <li>Keep your repositories organized with a .gitignore file</li>
+      </ul>
+      
+      <p>By mastering these Git fundamentals, you'll streamline your development process and collaborate more effectively with other developers.</p>
+    `
+  }
+];
