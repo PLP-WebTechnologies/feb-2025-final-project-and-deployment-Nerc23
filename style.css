@@ -318,3 +318,36 @@ textarea:focus {
   color: #842029;
 }
 
+/* Post detail */
+.post-detail {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-detail img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.post-detail h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.post-detail .post-meta {
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: var(--dark-gray);
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
