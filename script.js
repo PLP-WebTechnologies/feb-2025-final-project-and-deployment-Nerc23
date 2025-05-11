@@ -80,3 +80,60 @@ document.getElementById('myButton').addEventListener('click', function() {
       <p>Remember, the best way to learn web development is by doing. Start small, be consistent, and don't be afraid to make mistakes. Happy coding!</p>
     `
   },
+  {
+    id: 2,
+    title: 'CSS Best Practices',
+    date: 'May 5, 2023',
+    readTime: '3 min read',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    summary: 'Learn the best practices for writing clean and maintainable CSS code...',
+    content: `
+      <p>Writing CSS might seem straightforward, but creating clean, efficient, and maintainable stylesheets requires thought and planning. Here are some best practices that will help you write better CSS.</p>
+      
+      <h3>1. Use a Consistent Naming Convention</h3>
+      <p>Adopt a naming convention like BEM (Block, Element, Modifier) to create more predictable and organized class names:</p>
+      <pre><code>
+/* Block component */
+.card {}
+
+/* Element that depends on the block */
+.card__title {}
+.card__image {}
+
+/* Modifier that changes the style of the block */
+.card--featured {}
+      </code></pre>
+      
+      <h3>2. Organize CSS with a Methodology</h3>
+      <p>Use methodologies like ITCSS (Inverted Triangle CSS) or SMACSS (Scalable and Modular Architecture for CSS) to organize your stylesheets in a logical way.</p>
+      
+      <h3>3. Keep Selectors Simple</h3>
+      <p>Avoid deeply nested selectors as they increase specificity and make your CSS harder to maintain:</p>
+      <pre><code>
+
+
+/* Better */
+.nav-link {...}
+      </code></pre>
+      
+      <h3>4. Use CSS Variables for Consistency</h3>
+      <p>Take advantage of CSS custom properties (variables) to maintain consistency and make site-wide changes easier:</p>
+      <pre><code>
+:root {
+  --primary-color: #3a86ff;
+  --text-color: #333;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+}
+      </code></pre>
+      
+      <h3>5. Write Mobile-First Media Queries</h3>
+      <p>Start with styles for small screens and then add styles for larger screens with media queries:</p>
+      <pre><code>
+/* Base styles for all screen sizes */
+.container {
+  padding: 15px;
+}
