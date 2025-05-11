@@ -98,3 +98,34 @@ ul {
   transition: all 0.3s;
   }
 
+/* Hero section */
+.hero {
+  background: linear-gradient(to right, #3a86ff, #8338ec);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: 20px 0;
+}
+
+.page.active {
+  display: block;
+}
+
+
