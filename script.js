@@ -701,3 +701,158 @@ git tag v1.0.0
     `
   }
 ];
+
+
+
+// DOM Elements
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+const articlesLink = document.getElementById('articles-link');
+const aboutLink = document.getElementById('about-link');
+const contactLink = document.getElementById('contact-link');
+const homePageElement = document.querySelector('.home-page');
+const articlesPageElement = document.querySelector('.articles-page');
+const aboutPageElement = document.querySelector('.about-page');
+const contactPageElement = document.querySelector('.contact-page');
+const postDetailPageElement = document.querySelector('.post-detail-page');
+const postDetailElement = document.querySelector('.post-detail');
+const backButton = document.querySelector('.back-button');
+const readMoreButtons = document.querySelectorAll('.read-more');
+const contactForm = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+const articlesPostsGrid = document.querySelector('.articles-page .posts-grid');
+
+// Mobile menu toggle
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when a nav link is clicked
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
+});
+
+// Navigation handling
+function showPage(pageElement) {
+  // Hide all pages
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+  
+  // Show the selected page
+  pageElement.classList.add('active');
+  
+  // Update active navigation link
+  navItems.forEach(item => {
+    item.classList.remove('active');
+  });
+}
+
+// Navigation event listeners
+articlesLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showPage(articlesPageElement);
+  articlesLink.classList.add('active');
+  populateArticlesPage();
+});
+
+aboutLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showPage(aboutPageElement);
+  aboutLink.classList.add('active');
+});
+
+contactLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  showPage(contactPageElement);
+  contactLink.classList.add('active');
+});
+
+// Populate Articles Page
+function populateArticlesPage() {
+  articlesPostsGrid.innerHTML = '';
+  
+  blogPosts.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.className = 'post';
+    postElement.innerHTML = `
+      <img src="${post.image}" alt="${post.title}">
+      <h3>${post.title}</h3>
+      <p class="post-meta">Posted on ${post.date} | ${post.readTime}</p>
+      <p>${post.summary}</p>
+      <button class="btn read-more" data-id="${post.id}">Read More</button>
+    `;
+    articlesPostsGrid.appendChild(postElement);
+    
+    // Add event listener to the newly created read more button
+    postElement.querySelector('.read-more').addEventListener('click', function() {
+      const postId = parseInt(this.getAttribute('data-id'));
+      showPostDetail(postId);
+    });
+  });
+}
+
+// Show post detail
+function showPostDetail(postId) {
+  const post = blogPosts.find(post => post.id === postId);
+  
+  if (post) {
+    postDetailElement.innerHTML = `
+      <img src="${post.image}" alt="${post.title}">
+      <h2>${post.title}</h2>
+      <p class="post-meta">Posted on ${post.date} | ${post.readTime}</p>
+      <div class="content">
+        ${post.content}
+      </div>
+    `;
+    
+    showPage(postDetailPageElement);
+  }
+}
+
+// Add event listeners to all read more buttons
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const postId = parseInt(this.getAttribute('data-id'));
+    showPostDetail(postId);
+  });
+});
+
+// Back button functionality
+backButton.addEventListener('click', () => {
+  showPage(articlesPageElement);
+  articlesLink.classList.add('active');
+});
+
+// Contact form submission
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  
+  // Simple validation
+  if (name && email && subject && message) {
+    // In a real application, you would send this data to a server
+    console.log('Form submitted:', { name, email, subject, message });
+    
+    // Show success message
+    formMessage.className = 'success';
+    formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+    
+    // Reset form
+    contactForm.reset();
+  } else {
+    // Show error message
+    formMessage.className = 'error';
+    formMessage.textContent = 'Please fill out all fields.';
+  }
+});
