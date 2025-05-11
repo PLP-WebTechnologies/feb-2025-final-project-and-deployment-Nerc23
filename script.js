@@ -287,3 +287,40 @@ const person = {
     return "Hello, I'm " + this.firstName;
   }
 };
+
+// Accessing properties
+console.log(person.firstName); // "John"
+console.log(person["lastName"]); // "Doe"
+
+// Adding/modifying properties
+person.email = "john@example.com";
+person.age = 31;
+      </code></pre>
+      
+      <p>These fundamentals form the building blocks of JavaScript programming. As you get comfortable with these concepts, you can explore more advanced topics like asynchronous JavaScript, DOM manipulation, and modern JavaScript frameworks.</p>
+    `
+  },
+  {
+    id: 4,
+    title: 'Responsive Design Tips',
+    date: 'April 20, 2023',
+    readTime: '6 min read',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+    summary: 'Create websites that look great on all devices with these responsive design tips...',
+    content: `
+      <p>Responsive web design ensures that your website looks and functions well on all devices, from desktop computers to smartphones. Here are essential tips to create truly responsive websites.</p>
+      
+      <h3>Use a Mobile-First Approach</h3>
+      <p>Start designing for the smallest screen first, then progressively enhance the experience for larger screens:</p>
+      <pre><code>
+/* Base styles for mobile */
+.container {
+  padding: 15px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+}
