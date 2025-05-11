@@ -324,3 +324,117 @@ person.age = 31;
     padding: 30px;
   }
 }
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+      </code></pre>
+      
+      <h3>Flexible Grid Layouts</h3>
+      <p>Use CSS Grid or Flexbox for creating flexible layouts:</p>
+      <pre><code>
+/* Using CSS Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Using Flexbox */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+      </code></pre>
+      
+      <h3>Responsive Typography</h3>
+      <p>Make your text scale smoothly across different screen sizes:</p>
+      <pre><code>
+/* Using viewport units */
+h1 {
+  font-size: calc(1.5rem + 1.5vw);
+}
+
+/* Using media queries */
+p {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+}
+      </code></pre>
+      
+      <h3>Fluid Images</h3>
+      <p>Ensure images scale properly within their containers:</p>
+      <pre><code>
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* For background images */
+.banner {
+  background-image: url('image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+      </code></pre>
+      
+      <h3>Use Appropriate Input Types for Forms</h3>
+      <p>Enhance the mobile experience with proper form input types:</p>
+      <pre><code>
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone Number">
+<input type="date">
+<input type="number">
+      </code></pre>
+      
+      <h3>Touch-Friendly Elements</h3>
+      <p>Ensure interactive elements are large enough for touch interaction:</p>
+      <pre><code>
+button, 
+.nav-link,
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 15px;
+}
+      </code></pre>
+      
+      <h3>Test on Real Devices</h3>
+      <p>While browser dev tools are useful, nothing replaces testing on actual devices:</p>
+      <ul>
+        <li>Test on various screen sizes and orientations</li>
+        <li>Check different browsers (Chrome, Safari, Firefox, etc.)</li>
+        <li>Verify touch interactions work as expected</li>
+        <li>Test loading performance on mobile networks</li>
+      </ul>
+      
+      <h3>Consider Performance</h3>
+      <p>Mobile users may have slower connections:</p>
+      <ul>
+        <li>Optimize images for different screen sizes</li>
+        <li>Consider implementing lazy loading</li>
+        <li>Minimize resource-heavy animations on mobile</li>
+        <li>Reduce the number of HTTP requests</li>
+      </ul>
+      
+      <h3>Use CSS Media Queries Strategically</h3>
+      <p>Don't just create breakpoints at common device widths. Instead, let the content determine where designs need to adapt.</p>
+      
+      <p>By applying these responsive design principles, you'll create websites that provide an optimal viewing and interaction experience across a wide range of devices.</p>
+    `
+  },
