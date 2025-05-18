@@ -9,6 +9,9 @@ Deploy the project using GitHub Pages, Netlify, or Vercel.
 Choose one of the following project ideas:
 Blog Website: Implement a multi-page site with navigation.
 Ecommerce Website: Implement a multi-page site with navigation.
+-------------------------------------------------------------------
+- I picked the Blog Website
+-----------------------------------------------------------------------
 
 >[!NOTE]
 > - Include at least:
