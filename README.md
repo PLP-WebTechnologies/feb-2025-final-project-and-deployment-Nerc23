@@ -24,10 +24,6 @@ Ecommerce Website: Implement a multi-page site with navigation.
 Create a well-structured HTML5 document.
 Use at least 5 different HTML elements.
 Ensure semantic correctness.
-
-Good luck and happy coding! 🚀💻
-
-
-_______________________________
+---------------------------------------------------------------------------------------------
 Live Demo:
-blog-website113.netlify.app
+https://blog-website113.netlify.app/
